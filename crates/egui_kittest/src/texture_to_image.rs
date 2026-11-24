@@ -49,7 +49,7 @@ pub(crate) fn texture_to_image(device: &Device, queue: &Queue, texture: &Texture
     // Poll the device in a blocking manner so that our future resolves.
     device
         .poll(wgpu::PollType::Wait {
-            submission_index: Some(submission_index),
+            submission_index,
             timeout: Some(WAIT_TIMEOUT),
         })
         .expect("Failed to poll device");

@@ -204,6 +204,7 @@ impl crate::TestRenderer for WgpuTestRenderer {
                 format: self.render_state.target_format,
                 usage: wgpu::TextureUsages::RENDER_ATTACHMENT | wgpu::TextureUsages::COPY_SRC,
                 view_formats: &[],
+                texture_binding_view_dimension: None,
             });
 
         let texture_view = texture.create_view(&wgpu::TextureViewDescriptor::default());

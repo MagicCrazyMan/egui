@@ -67,6 +67,7 @@ impl WebPainterWgpu {
                     format: depth_stencil_format,
                     usage: wgpu::TextureUsages::RENDER_ATTACHMENT,
                     view_formats: &[depth_stencil_format],
+                    texture_binding_view_dimension: None,
                 })
                 .create_view(&wgpu::TextureViewDescriptor::default())
         })
